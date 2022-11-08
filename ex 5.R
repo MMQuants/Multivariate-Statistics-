@@ -56,3 +56,7 @@ xtabs(Freq~Survived+CLass, data = titanic, subset=Sex="Female")
 tbl <- xtabs(Freq~Sex, titanic)
 tbl
 mosaicplot(tbl)
+
+tbl2<-xtabs(Freq~Sex+Survived+Class, titanic)
+
+mosaicplot(tbl2)
