@@ -69,3 +69,5 @@ Class = rep(titanic$Class, titanic$Freq)
 Class = ordered(Class)
 
 head(Class)
+
+cor(as.numeric((Survived), as.numeric(Class), method='kendall'))
