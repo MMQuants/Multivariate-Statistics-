@@ -60,3 +60,12 @@ mosaicplot(tbl)
 tbl2<-xtabs(Freq~Sex+Survived+Class, titanic)
 
 mosaicplot(tbl2)
+
+
+Survived = rep(titanic$Survived, titanic$Freq)
+Survived<- ordered(Survived)
+
+Class = rep(titanic$Class, titanic$Freq)
+Class = ordered(Class)
+
+head(Class)
