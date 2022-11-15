@@ -25,4 +25,9 @@ jbTest(y)
 # Shapiro-Wilk test
 shapiroTest(y)    #fBasics
 shapiro.test(y)   #stats
-shapi
+
+
+# Kolmogorov Smirnov test
+ksnormTest(y)       #fBasics
+ks.test(y, dunif)   #stats
+
