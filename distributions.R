@@ -51,3 +51,15 @@ plot(0:10, heights, type='h', main = "Spike plot", xlab= "k")
 points(0:10, heights, pch=16, cex=2)
 
 pbinom(60, size=100, prob=0.62)
+
+# Normal Distribution
+pnorm(1, mean=0, sd=1)
+pnorm(4.5, mean=4, sd=1/2)
+qnorm(c(0.25,0.5,0.75))
+
+mu = 178.3
+sigma = 7.34
+
+pnorm(190, mean = mu, sd = sigma, lower.tail= FALSE)*100
+
+
