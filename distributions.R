@@ -34,5 +34,20 @@ n<-10
 p<-1/4
 sample(0:1, size=n, replace=TRUE, p=c(1-p,p))
 
-)
+#Binomial distribution
+choose(10,5)*(1/2)^5*(1/2)^5   # binomial coeff
 
+dbinom(5, size=10, prob=1/2)
+
+# the probability that x<=6
+sum(dbinom(0:6, size=10, prob=1/2))
+pbinom(6, size=10, prob=1/2)
+
+pbinom(6, size=10, prob=1/2, lower.tail = FALSE)
+
+p<-1/2
+heights<-dbinom(0:10, size=n, prob=p)
+plot(0:10, heights, type='h', main = "Spike plot", xlab= "k")
+points(0:10, heights, pch=16, cex=2)
+
+pbinom(60, size=100, prob=0.62)
