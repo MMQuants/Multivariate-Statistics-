@@ -15,3 +15,5 @@ pchiTest(x)
 
 # skeweness = E((x-mu)/sigma)^3    asymmetry
 
+# kurtosis = E((x-mu)/sigma)^4     eksces
+
