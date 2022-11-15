@@ -1,1 +1,30 @@
 library(UsingR)
+
+# uniform distribution
+# veroqtnostta <1 pri interval min=0, max=3
+dunif(x=1, min=0, max=3)
+
+# veroqtnostta <2 pri interval min=0, max=3
+punif(q=2, min=0, max =3)
+
+# quantile
+qunif(p=1/2, min=0, max =3)
+
+# random generator of uniform distribution experiment
+runif(n=1, min=0, max=3)
+
+# find the quantiles
+ps <- seq(0,1, by=0.2)
+names(ps)<-as.character(seq(0,100, by=20))
+ps
+
+qunif(ps, min=1, max=3)
+
+x<-runif(100)
+d<-density(x)
+d
+
+#draw some
+curve(dunif, -0.1, 1.1, ylim=c(0,max(d$y,1)))
+lines(d, lty=2)
+rug(x)
