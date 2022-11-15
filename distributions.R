@@ -62,4 +62,43 @@ sigma = 7.34
 
 pnorm(190, mean = mu, sd = sigma, lower.tail= FALSE)*100
 
+# student distribution
+qt(c(0.025, 0.975), df=10)
 
+# chi squared distribution
+qchisq(c(0.025, 0.975), df=10)
+
+
+# task 01
+dbinom(49800,100000, prob=1/2)
+
+# task 02
+pbinom(35, 100, prob=0.4)
+
+# task 03
+pnorm(2.2, mean=0, sd=1)
+
+big = pnorm(2, mean=0, sd=1)
+small = pnorm(1, mean=0, sd=1)
+big - small
+
+pnorm(2.5, mean=0, sd=1, lower.tail = FALSE)
+1 - pnorm(2.5, mean=0, sd=1)
+
+qnorm(0.95, mean=0, sd=1)
+
+# task 04
+1-pnorm(450, mean=350, sd=75)
+
+# task 05
+1- pnorm(22, mean=20.6, sd =5.5)
+
+pnorm(23, mean=20.6, sd =5.5)*1000000
+
+# taks 06
+mu = 3.2
+sd = 0.35
+
+big = pnorm(4, mean=3.2, sd=0.35)
+small = pnorm(3.5, mean=3.2, sd=0.35)
+(big - small)*100
