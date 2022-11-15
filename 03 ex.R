@@ -10,3 +10,5 @@ library(fBasics)
 y = rnorm(1000)
 pchiTest(y)
 
+x = runif(1000)
+pchiTest(x)
