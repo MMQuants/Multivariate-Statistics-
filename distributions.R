@@ -28,3 +28,11 @@ d
 curve(dunif, -0.1, 1.1, ylim=c(0,max(d$y,1)))
 lines(d, lty=2)
 rug(x)
+
+# Bernoulli distribution
+n<-10
+p<-1/4
+sample(0:1, size=n, replace=TRUE, p=c(1-p,p))
+
+)
+
