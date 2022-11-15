@@ -7,6 +7,9 @@ library(MASS)
 install.packages('fBasics')
 library(fBasics)
 
+install.packages('interp')
+library(interp)
+
 y = rnorm(1000)
 pchiTest(y)
 
@@ -16,4 +19,6 @@ pchiTest(x)
 # skeweness = E((x-mu)/sigma)^3    asymmetry
 
 # kurtosis = E((x-mu)/sigma)^4     eksces
+
+jbTest(y)
 
