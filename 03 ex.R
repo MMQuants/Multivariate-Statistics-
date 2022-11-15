@@ -22,3 +22,7 @@ pchiTest(x)
 
 jbTest(y)
 
+# Shapiro-Wilk test
+shapiroTest(y)    #fBasics
+shapiro.test(y)   #stats
+shapi
