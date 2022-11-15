@@ -12,3 +12,6 @@ pchiTest(y)
 
 x = runif(1000)
 pchiTest(x)
+
+# skeweness = E((x-mu)/sigma)^3    asymmetry
+
