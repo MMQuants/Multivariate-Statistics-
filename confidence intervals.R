@@ -78,3 +78,11 @@ confint(t.test(OZS, conf.level = 0.9))
 # one sided intervals
 x = c(175, 185,170,184,175)
 t.test(x, conf.level = 0.9, alternative = 'less')
+
+#conf interval for variance
+n =10
+s2 = 12
+alpha = 1-0.95
+lstar = qchisq(alpha/2, df=n-1)
+rstar = qchisq(1- alpha/2, df=n-1)
+sqrt(c(lower = (n-1)*s2/rstar, upper = (n-1)*s2/lstar))
