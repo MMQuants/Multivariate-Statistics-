@@ -101,7 +101,6 @@ n = length(stud.recs$sat.m)
 
 variance = var(stud.recs$sat.m)
 variance
-
 sqrt(variance)
 
 sqrt(c(lower = (n-1)*s2/rstar, upper = (n-1)*s2/lstar))
@@ -111,4 +110,20 @@ lstar = qchisq(alpha/2, df=n-1)
 rstar = qchisq(1- alpha/2, df=n-1)
 
 #answer
-sqrt(c(lower = (n-1)*s2/rstar, upper = (n-1)*s2/lstar))
+sqrt(c(lower = (n-1)*variance/rstar, upper = (n-1)*variance/lstar))
+
+# 90% conf int for 5 year babies for mu and std
+kid.weights
+
+yr5 <- subset(kid.weights, subset = 5*12<=age & age<6*12)
+yr5
+n = length(yr5)
+alpha = 1-0.9
+t.test(yr5$weight, conf.level = 0.9)
+variance = var(yr5$weight)
+variance
+lstar = qchisq(alpha/2, df=n-1)
+rstar = qchisq(1- alpha/2, df=n-1)
+
+#answer
+sqrt(c(lower = (n-1)*variance/rstar, upper = (n-1)*variance/lstar))
