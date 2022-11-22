@@ -16,3 +16,9 @@ t.test(sample, sample2, var.equal = TRUE)
 
 # F test testing variance
 var.test(sample, sample2)
+
+res = t.test(sample, sample2, var.equal = TRUE)
+res$p.value
+res
+
+res$estimate
