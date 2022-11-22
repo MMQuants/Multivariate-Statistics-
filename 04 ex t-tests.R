@@ -33,3 +33,8 @@ model1 = aov(score ~ method, data=data)
 model1
 
 summary(model1)
+
+# bartlet
+
+bartlett.test(score ~ method, dat = data)
+
