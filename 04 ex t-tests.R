@@ -1,0 +1,5 @@
+sample = rnorm(10,5,6)
+mean(sample)
+var(sample)
+sqrt(var(sample))
+sd(sample)
