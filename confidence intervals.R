@@ -35,3 +35,18 @@ binom.test(x,n,conf.level = 0.9)$conf.int
 # variant04
 confint(binom.test(x,n,conf.level = 0.9))
 
+#task 02 n= 100 , phat = 0.45   80% and 90% conf intervals
+n= 100 
+phat = 0.45
+alpha1 = 1-0.8
+z = qnorm(1-alpha/2)
+
+#for 80% conf intervals
+prop.test(x,n,conf.level = 0.8)
+binom.test(x,n,conf.level = 0.8)$conf.int
+confint(binom.test(x,n,conf.level = 0.8))
+
+#for 90% conf intervals
+prop.test(x,n,conf.level = 0.9)
+binom.test(x,n,conf.level = 0.9)$conf.int
+confint(binom.test(x,n,conf.level = 0.9))
