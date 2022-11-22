@@ -50,3 +50,21 @@ confint(binom.test(x,n,conf.level = 0.8))
 prop.test(x,n,conf.level = 0.9)
 binom.test(x,n,conf.level = 0.9)$conf.int
 confint(binom.test(x,n,conf.level = 0.9))
+
+
+# task 03
+z1 = qnorm(0.975)
+z2 = qnorm(0.9)
+(z1/0.02)^2
+(z2/0.02)^2
+
+# task 04 student distribution
+n=30
+xbar = 66
+s = 4
+alpha = 1-0.8
+tstar = qt(1-alpha/2, df=n-1)
+SE = s/sqrt(n)
+xbar +c(-1,1)*tstar*SE
+
+
