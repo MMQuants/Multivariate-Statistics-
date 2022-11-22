@@ -86,3 +86,29 @@ alpha = 1-0.95
 lstar = qchisq(alpha/2, df=n-1)
 rstar = qchisq(1- alpha/2, df=n-1)
 sqrt(c(lower = (n-1)*s2/rstar, upper = (n-1)*s2/lstar))
+
+
+# in stud.recs there are SAT scores 
+
+info = stud.recs
+mu = mean(stud.recs$sat.m)
+mu
+
+alpha = 1-0.9
+
+t.test(stud.recs$sat.m, conf.level = 0.9)
+n = length(stud.recs$sat.m)
+
+variance = var(stud.recs$sat.m)
+variance
+
+sqrt(variance)
+
+sqrt(c(lower = (n-1)*s2/rstar, upper = (n-1)*s2/lstar))
+
+t.test(x = stud.recs$sat.m, conf.level = 0.9)
+lstar = qchisq(alpha/2, df=n-1)
+rstar = qchisq(1- alpha/2, df=n-1)
+
+#answer
+sqrt(c(lower = (n-1)*s2/rstar, upper = (n-1)*s2/lstar))
