@@ -28,3 +28,6 @@ SD = sqrt(phat*(1-phat)/n)
 
 # variant02
 prop.test(x,n,conf.level = 0.9)
+
+# variant03
+binom.test(x,n,conf.level = 0.9)$conf.int
