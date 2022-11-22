@@ -41,12 +41,12 @@ phat = 0.45
 alpha1 = 1-0.8
 z = qnorm(1-alpha/2)
 
-#for 80% conf intervals
+## answer for 80% conf intervals
 prop.test(x,n,conf.level = 0.8)
 binom.test(x,n,conf.level = 0.8)$conf.int
 confint(binom.test(x,n,conf.level = 0.8))
 
-#for 90% conf intervals
+## answer for 90% conf intervals
 prop.test(x,n,conf.level = 0.9)
 binom.test(x,n,conf.level = 0.9)$conf.int
 confint(binom.test(x,n,conf.level = 0.9))
@@ -55,6 +55,7 @@ confint(binom.test(x,n,conf.level = 0.9))
 # task 03
 z1 = qnorm(0.975)
 z2 = qnorm(0.9)
+# answer
 (z1/0.02)^2
 (z2/0.02)^2
 
@@ -65,6 +66,15 @@ s = 4
 alpha = 1-0.8
 tstar = qt(1-alpha/2, df=n-1)
 SE = s/sqrt(n)
-xbar +c(-1,1)*tstar*SE
+# answer
+xbar+c(-1,1)*tstar*SE
 
+# task 05
+OZS = c(1.95,1.8,2.1,1.82,1.75,2.01,1.83,1.9)
+qqnorm(OZS) # visual check for normal distribution
 
+confint(t.test(OZS, conf.level = 0.9))
+
+# one sided intervals
+x = c(175, 185,170,184,175)
+t.test(x, conf.level = 0.9, alternative = 'less')
