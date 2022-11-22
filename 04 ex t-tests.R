@@ -10,3 +10,9 @@ t.test(sample, mu=5)
 sample2 = rnorm(20,10,2)
 sample2
 t.test(sample, sample2)
+
+# Two Sample t-test
+t.test(sample, sample2, var.equal = TRUE)
+
+# F test testing variance
+var.test(sample, sample2)
