@@ -13,3 +13,16 @@ phat+c(-1,1)*z*SD
 c(lower = phat-z*SD, upper = phat+z*SD )
 
 prop.test(x,n,conf.level = 0.975)
+
+
+# task 01
+x=80
+n = 125
+phat = x/n
+alpha = 1 - 0.9
+z = qnorm(1-alpha/2)
+
+# variant01
+SD = sqrt(phat*(1-phat)/n)
+(phat+c(-1,1)*z*SD)*100
+
