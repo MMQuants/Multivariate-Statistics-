@@ -31,3 +31,7 @@ prop.test(x,n,conf.level = 0.9)
 
 # variant03
 binom.test(x,n,conf.level = 0.9)$conf.int
+
+# variant04
+confint(binom.test(x,n,conf.level = 0.9))
+
