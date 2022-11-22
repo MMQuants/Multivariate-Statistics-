@@ -26,3 +26,5 @@ z = qnorm(1-alpha/2)
 SD = sqrt(phat*(1-phat)/n)
 (phat+c(-1,1)*z*SD)*100
 
+# variant02
+prop.test(x,n,conf.level = 0.9)
