@@ -18,3 +18,9 @@ leveneTest(len~supp, dat=ToothGrowth)
 leveneTest(len~as.factor(dose), dat=ToothGrowth)
 
 bartlett.test(len~as.factor(dose), dat=ToothGrowth)
+
+# comparing only 2 samples' variance
+var.test(len~supp, dat=ToothGrowth)
+
+# cannot compare 3 samples' variance
+var.test(len~as.factor(dose), dat=ToothGrowth)
