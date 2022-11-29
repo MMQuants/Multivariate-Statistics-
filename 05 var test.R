@@ -8,3 +8,8 @@ bartlett.test(len~supp, dat=ToothGrowth)
 
 # compare the dose samples's variance (3 types)
 bartlett.test(len~supp, dat=ToothGrowth)
+
+install.packages("car")
+library(car)
+
+leveneTest(len~supp, dat=ToothGrowth)
