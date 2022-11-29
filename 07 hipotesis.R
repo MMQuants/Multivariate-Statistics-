@@ -58,3 +58,13 @@ T = (xbar-mu0)*sqrt(n)/SD
 pt(T,df=n-1)
 
 t.test(mpg,  mu=mu0, alternative = 'less')
+
+#task 04
+xbar = 58260
+mu0 = 55000
+n = 25
+SD = 3250
+
+T = (xbar-mu0)*sqrt(n)/SD
+
+pt(T,df=n-1, lower.tail = FALSE)
