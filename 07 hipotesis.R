@@ -27,3 +27,22 @@ x = sum(samhda$marijuana==1)
 n = length(samhda$marijuana)
 prop.test(x,n,p=0.5, alternative = 'two.sided')
 x/n
+
+
+# task 02
+n = 50
+x = 40
+p0 = 0.75
+
+phat = x/n
+# we cannot trow away the null hypotesis
+prop.test(x,n,p=p0, alternative = 'greater')
+
+# task 03
+x=2700
+n = 25000
+p0 = 0.1
+
+phat = x/n
+prop.test(x,n,p=p0, alternative = 'greater')
+# we  trow away the null hypotesis
