@@ -46,3 +46,15 @@ p0 = 0.1
 phat = x/n
 prop.test(x,n,p=p0, alternative = 'greater')
 # we  trow away the null hypotesis
+
+# hypotesis for mean
+mpg = c(11.4, 13.1, 14.7, 14.7, 15, 15.5, 15.6, 15.9, 16, 16.8)
+xbar = mean(mpg)
+SD = sd(mpg)
+n = length(mpg)
+mu0 = 17
+
+T = (xbar-mu0)*sqrt(n)/SD
+pt(T,df=n-1)
+
+t.test(mpg,  mu=mu0, alternative = 'less')
