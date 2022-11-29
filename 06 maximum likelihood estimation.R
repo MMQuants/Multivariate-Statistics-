@@ -24,6 +24,9 @@ x= rnorm(100, mean=1, sd=2)
 logLikFun = function(param) {
   mu = param[1]
   sigma = param[2]
-  sum(dnorm(x, mean=mu, sd=sigme, log=TRUE))
+  sum(dnorm(x, mean=mu, sd=sigma, log=TRUE))
 }
 
+# max log likelihood estimation
+mle = maxLik(logLik = logLikFun, start =c(mu=0, sigma=1))
+summary(mle)
