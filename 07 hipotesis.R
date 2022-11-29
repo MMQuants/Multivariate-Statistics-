@@ -15,5 +15,15 @@ pnorm(phat, mean=p0, sd = SD, lower.tail = FALSE)
 prop.test(x,n,p=p0, alternative = 'greater')
 
 # two-sided alternative
-prop.test(x,n,p=p0, alternative = 'two.sided')
+out = prop.test(x,n,p=p0, alternative = 'two.sided')
+out
+summary(out)
 
+out$p.value
+
+# task 01
+head(samhda)
+x = sum(samhda$marijuana==1)
+n = length(samhda$marijuana)
+prop.test(x,n,p=0.5, alternative = 'two.sided')
+x/n
