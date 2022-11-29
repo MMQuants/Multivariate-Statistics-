@@ -35,6 +35,8 @@ model1
 summary(model1)
 
 # bartlet
-
+# compare more than 2 samples's variance
 bartlett.test(score ~ method, dat = data)
+
+
 
