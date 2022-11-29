@@ -8,14 +8,24 @@ SD = sqrt(p0*(1-p0)/n)
 
 z= (phat-p0)/ SD
 
-pnorm(z, lower.tail = FALSE)
+pnorm(z, 
+      lower.tail = FALSE)
 
-pnorm(phat, mean=p0, sd = SD, lower.tail = FALSE)
+pnorm(phat, 
+      mean=p0, 
+      sd = SD, 
+      lower.tail = FALSE)
 
-prop.test(x,n,p=p0, alternative = 'greater')
+prop.test(x,
+          n,
+          p=p0, 
+          alternative = 'greater')
 
 # two-sided alternative
-out = prop.test(x,n,p=p0, alternative = 'two.sided')
+out = prop.test(x,
+                n,
+                p=p0, 
+                alternative = 'two.sided')
 out
 summary(out)
 
@@ -25,7 +35,10 @@ out$p.value
 head(samhda)
 x = sum(samhda$marijuana==1)
 n = length(samhda$marijuana)
-prop.test(x,n,p=0.5, alternative = 'two.sided')
+prop.test(x,
+          n,
+          p=0.5, 
+          alternative = 'two.sided')
 x/n
 
 
@@ -36,7 +49,10 @@ p0 = 0.75
 
 phat = x/n
 # we cannot trow away the null hypotesis
-prop.test(x,n,p=p0, alternative = 'greater')
+prop.test(x,
+          n,
+          p=p0, 
+          alternative = 'greater')
 
 # task 03
 x=2700
@@ -44,7 +60,10 @@ n = 25000
 p0 = 0.1
 
 phat = x/n
-prop.test(x,n,p=p0, alternative = 'greater')
+prop.test(x,
+          n,
+          p=p0, 
+          alternative = 'greater')
 # we  trow away the null hypotesis
 
 # hypotesis for mean
@@ -57,7 +76,9 @@ mu0 = 17
 T = (xbar-mu0)*sqrt(n)/SD
 pt(T,df=n-1)
 
-t.test(mpg,  mu=mu0, alternative = 'less')
+t.test(mpg,  
+       mu=mu0, 
+       alternative = 'less')
 
 # task 04
 xbar = 58260
@@ -81,7 +102,9 @@ T = (xbar-mu0)*sqrt(n)/SD
 pt(abs(T),df=n-1, lower.tail = FALSE)
 
 
-t.test(stud.recs$sat.m,  mu=mu0, alternative = 'two.sided')
+t.test(stud.recs$sat.m,  
+       mu=mu0, 
+       alternative = 'two.sided')
 
 # task 06
 head(babies$dht)
@@ -89,4 +112,17 @@ head(babies$dht)
 data = babies$dht[babies$dht != 99]
 data
 
-t.test(data,  mu=68, alternative = 'greater')
+t.test(data,  
+       mu=68, 
+       alternative = 'greater')
+
+# power test
+
+alpha = 0.05
+beta = 0.2
+power.t.test(delta =1, 
+             sd=1, 
+             sig.level = alpha, 
+             power = 1- beta, 
+             type = "one.sample", 
+             alternative = "one.sided")
