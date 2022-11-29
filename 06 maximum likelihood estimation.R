@@ -30,3 +30,22 @@ logLikFun = function(param) {
 # max log likelihood estimation
 mle = maxLik(logLik = logLikFun, start =c(mu=0, sigma=1))
 summary(mle)
+
+# ploting multi normal distribution
+x = seq(-3, 3, 0.1)
+y = seq(-3, 3, 0.1)
+
+mu = c(0,0)
+sigma = matrix(c(2,-1,-1,2), nrow=2)
+sigma
+
+library(mnormt)
+f = function(x,y){
+  
+  dmnorm(cbind(x,y),mu,sigma)
+}
+
+
+contour(x,y,z)
+z = outer(x,y,f)
+
