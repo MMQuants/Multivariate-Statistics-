@@ -82,3 +82,11 @@ pt(abs(T),df=n-1, lower.tail = FALSE)
 
 
 t.test(stud.recs$sat.m,  mu=mu0, alternative = 'two.sided')
+
+# task 06
+head(babies$dht)
+
+data = babies$dht[babies$dht != 99]
+data
+
+t.test(data,  mu=68, alternative = 'greater')
