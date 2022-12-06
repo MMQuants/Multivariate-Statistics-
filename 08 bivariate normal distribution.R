@@ -44,4 +44,8 @@ CIr(-0.6865, 47,level = 0.95)
 #confidence interval for Fisher correlation based
 CIz(-0.6865, 47,level = 0.95)
 
+# Spearman correlation
+cor.test(swiss[,2], swiss[,3], method = 'spearman')
 
+# Kendall correlation
+cor.test(swiss[,2], swiss[,3], method = 'kendall')
