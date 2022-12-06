@@ -25,3 +25,16 @@ qqnorm(log(salmon.rate))
 # we cannot reject the  null hypothesis
 wilcox.test(log(salmon.rate), mu=log(0.005), n= length(salmon.rate), alternative = "greater")
 
+sal = sum(salmon.rate>0.005)
+n = length(salmon.rate)
+
+1-pbinom(sal-1, n , 1/2)
+
+# example 03 test if median is different than 22
+wilcox.test(log(exec.pay), mu=log(22), n= length(exec.pay), alternative = "two.sided")
+
+pay = sum(exec.pay > 22)
+n = length(exec.pay)
+
+probability = 1 - pbinom(max(pay, n-pay)-1, n, 1/2)
+probability                     
