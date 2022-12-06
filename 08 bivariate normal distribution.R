@@ -27,3 +27,9 @@ var(swiss[,2:3])
 
 # covariation matrix for all the data
 var(swiss)
+
+# correlation matrix for all the data
+cor(swiss)
+
+# correlation importance test
+cor.test(swiss[,2], swiss[,3])
