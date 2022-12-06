@@ -52,3 +52,16 @@ p = sum(n*phat)/sum(n)
 z = (phat[1]-phat[2])/sqrt(p*(1-p)*sum(1/n))
 z
 pnorm(z)
+
+# example 05
+phat01 = 18 / 22
+phat02 = 3 / 22
+n= 22
+p = sum(22*phat01+22*phat02)/(2*22)
+
+prop.test(c(n*phat01, n*phat02), c(n,n), alternative = 'two.sided')
+
+z = (phat01-phat02)/sqrt(p*(1-p)*sum(1/n))
+z
+pnorm(z, lower.tail = FALSE)
+
