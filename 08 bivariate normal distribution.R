@@ -33,3 +33,15 @@ cor(swiss)
 
 # correlation importance test
 cor.test(swiss[,2], swiss[,3])
+
+
+install.packages('psychometric')
+library(psychometric)
+
+#confidence interval for Pearson correlation
+CIr(-0.6865, 47,level = 0.95)
+
+#confidence interval for Fisher correlation based
+CIz(-0.6865, 47,level = 0.95)
+
+
