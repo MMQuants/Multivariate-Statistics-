@@ -127,3 +127,11 @@ qqnorm(B)
 
 # Wilcox test
 wilcox.test(A, B)
+
+# example 10
+head(normtemp)
+
+plot(density(normtemp$temperature[normtemp$gender==1]))
+plot(density(normtemp$temperature[normtemp$gender==2]))
+
+t.test(temperature ~ gender, data = normtemp)
