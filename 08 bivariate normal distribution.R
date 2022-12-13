@@ -59,8 +59,10 @@ biv5 = function(par){
   cov = par[5]*sqrt(par[3]*par[4])
   biv5 = sum(-dmvnorm(swiss1, mean = c(par[1],par[2]), sigma = matrix(c(par[3], cov, cov, par[4]),2,2),log=TRUE))
   print(c(par, biv5))
+  biv5
 }
 
 res = nlm(biv5, c(45,45,1600,1600, 8), hessian = TRUE)
+warnings()
 
-
+res$hessian
