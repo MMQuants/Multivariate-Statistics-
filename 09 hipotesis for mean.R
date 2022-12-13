@@ -78,3 +78,16 @@ qqnorm(m600)
 var.test(m300, m600)
 
 t.test(m300, m600, var.equal = TRUE)
+
+# example 07 placebo treatment
+Finasteride = c(5,3,5,6,4,4,7,4,3)
+placebo =     c(2,3,2,4,2,2,3,4,2)
+
+# check for normality 
+qqnorm(Finasteride)
+qqnorm(placebo)
+plot(density(Finasteride))
+plot(density(placebo))
+lines(density(Finasteride), lt=2)
+
+
