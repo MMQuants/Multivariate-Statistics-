@@ -84,6 +84,7 @@ Finasteride = c(5,3,5,6,4,4,7,4,3)
 placebo =     c(2,3,2,4,2,2,3,4,2)
 
 # check for normality 
+boxplot(Finasteride, placebo)
 qqnorm(Finasteride)
 qqnorm(placebo)
 plot(density(Finasteride))
@@ -95,3 +96,21 @@ var.test(Finasteride, placebo)
 
 # check  if mu1 = mu2
 t.test(Finasteride, placebo, paired = TRUE, alternative = "two.sided", var.equal = TRUE)
+
+# example 08 exam grades
+entrance = c(77,56,64,60,57,53,72,62,65,66)
+exit = c(88,74,83,68,58,50,67,64,74,60)
+mean(entrance)
+mean(exit)
+
+# check for normality 
+qqnorm(entrance)
+qqnorm(exit)
+
+# check  if sd1 = sd2
+var.test(entrance, exit)
+
+# check  if mu1 = mu2
+t.test(entrance, exit, paired = TRUE, alternative = "less")
+
+
