@@ -90,4 +90,8 @@ plot(density(Finasteride))
 plot(density(placebo))
 lines(density(Finasteride), lt=2)
 
+# check  if sd1 = sd2
+var.test(Finasteride, placebo)
 
+# check  if mu1 = mu2
+t.test(Finasteride, placebo, paired = TRUE, alternative = "two.sided", var.equal = TRUE)
