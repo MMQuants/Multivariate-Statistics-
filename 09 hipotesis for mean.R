@@ -113,4 +113,17 @@ var.test(entrance, exit)
 # check  if mu1 = mu2
 t.test(entrance, exit, paired = TRUE, alternative = "less")
 
+# example 09
+A = c(5.8,1.0,1.1,2.1,2.5,1.1,1.0,1.2,3.3,2.7)
+B = c(1.5,2.7,6.6,4.6,1.1,1.2,5.7,3.2,1.2,1.3)
 
+# check for normality
+plot(density(A))
+plot(density(B))
+lines(density(B), lt=2)
+
+qqnorm(A)
+qqnorm(B)
+
+# Wilcox test
+wilcox.test(A, B)
