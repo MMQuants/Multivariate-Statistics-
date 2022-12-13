@@ -65,3 +65,16 @@ z = (phat01-phat02)/sqrt(p*(1-p)*sum(1/n))
 z
 pnorm(z, lower.tail = FALSE)
 
+# example 06 hypothesis for mean of 2 samples
+m300 = c(284,279,289,292,287,295,285,279,306,298)
+m600 = c(298,317,297,279,291,335,299,300,306,291)
+
+plot(density(m300))
+plot(density(m600))
+qqnorm(m300)
+qqnorm(m600)
+
+# null hypothesis is that they have equal standard deviation 
+var.test(m300, m600)
+
+t.test(m300, m600, var.equal = TRUE)
