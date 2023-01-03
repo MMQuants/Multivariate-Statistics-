@@ -25,3 +25,9 @@ grid.arrange(p1, p2, ncol=2)
 dep_vars <- cbind(df$height, df$canopy_vol)
 fit <- manova(dep_vars ~ plant_var, data = df)
 summary(fit)
+
+# get effect size
+install.packages('effectsize')
+library(effectsize)
+effectsize::eta_squared(fit)
+
