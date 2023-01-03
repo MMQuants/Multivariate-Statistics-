@@ -57,3 +57,22 @@ y
 ps = c(0.15, 0.05, 0.05, 0.05, 0.1, 0.2, 0.4)
 
 chisq.test(y, p = ps)
+
+
+# task 04
+# chisquae for independence
+# null hypotesis = INdependent
+# alternative hypotesis = dependent 
+
+seatbelt = rbind(c(56,8), c(2,16))
+chisq.test(seatbelt)
+
+
+# task 05
+# does smoking depend on gender
+
+tbl = xtabs(~ gender+ amt.smoke, subset = amt.smoke< 98 & gender != 7, data = samhda)
+tbl
+chisq.test(tbl)
+
+chisq.test(tbl, simulate.p.value = TRUE)
