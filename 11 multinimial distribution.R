@@ -21,11 +21,20 @@ p = p / sum(p)
 n = sum(y)
 
 # manual calculations
-chi2 = sum((y-n*p)^2 / n*p)
+chi2 = sum(((y-n*p)^2) / (n*p))
 
 pchisq(chi2, df=2, lower.tail = FALSE)
 
 
 # auto calculations
-chisq.test(y, p)
+chisq.test(y, p=p)
 
+
+# task 03 
+amt = with(samhda, samhda$amt.smoke[amt.smoke < 98])
+
+y = table(amt)
+y
+ps = c(0.15, 0.05, 0.05, 0.05, 0.1, 0.2, 0.4)
+
+chisq.test(y, p = ps)
