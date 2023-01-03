@@ -60,7 +60,7 @@ chisq.test(y, p = ps)
 
 
 # task 04
-# chisquae for independence
+# chisquare for independence
 # null hypotesis = INdependent
 # alternative hypotesis = dependent 
 
@@ -76,3 +76,19 @@ tbl
 chisq.test(tbl)
 
 chisq.test(tbl, simulate.p.value = TRUE)
+
+
+# task 06
+# chisquare for homogeneity
+# null hypotesis = having the same distribution
+# alternative hypotesis = don't have the same distribution 
+
+celaxa = c (2,3,7)
+placebo = c(2,8,2)
+
+x = rbind(celaxa, placebo)
+x
+colnames(x) = c('bad', 'no difference', 'good')
+x
+
+chisq.test(x, simulate.p.value = TRUE)
