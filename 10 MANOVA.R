@@ -31,3 +31,8 @@ install.packages('effectsize')
 library(effectsize)
 effectsize::eta_squared(fit)
 
+library(MASS)
+post_hoc <- lda(df$plant_var ~ dep_vars, CV=F)
+post_hoc
+
+lda(df$plant_var ~ dep_vars, CV = F)
