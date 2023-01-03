@@ -21,13 +21,32 @@ p = p / sum(p)
 n = sum(y)
 
 # manual calculations
-chi2 = sum(((y-n*p)^2) / (n*p))
+y = c(35,40,25)
+n = sum(y)
 
-pchisq(chi2, df=2, lower.tail = FALSE)
+phat1 = phat2 = sum(y[1:2]) / (2*n )
+
+phat3 = 1 - phat1 - phat2
+
+phat = c(phat1 , phat2, phat3)
+
+obs = sum((y-n*phat)^2 / (n*phat))
+
+pchisq(obs, df = 2-1, lower.tail = FALSE)
+
+
+# chi2 = sum(((y-n*p)^2) / (n*p))
+
+# pchisq(chi2, df=2, lower.tail = FALSE)
 
 
 # auto calculations
 chisq.test(y, p=p)
+
+
+
+chisq.test(y, p=p)
+
 
 
 # task 03 
