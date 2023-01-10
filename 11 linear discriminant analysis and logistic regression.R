@@ -56,3 +56,8 @@ ws
 tratio = ws$coefficients / ws$standard.errors
 tratio
 
+pt(abs(tratio), df = ws$edf)   
+
+ws$fitted.values     
+
+plot(ws$fitted.values[,2],ws$fitted.values[,3],col=colors)
