@@ -34,4 +34,25 @@ x=wines %>% group_by(V1) %>%  summarise(n = n(),
 
 x
 
+# ANOVA
+model1=aov(V2~V1,data=wines)
+summary(model1)
+
+
+# logistic regression
+wines$Class= as.factor(wines$V1)
+head(wines)
+
+install.packages('nnet')
+library(nnet)
+wines$rClass = relevel(wines$Class, ref = 2)     # set reference category
+winelogit=multinom(rClass~V2+V3+V4+V13+V14,data=wines,maxit=200)
+
+print(summary(winelogit), digits = 4)
+
+ws = summary(winelogit)             
+ws
+
+tratio = ws$coefficients / ws$standard.errors
+tratio
 
