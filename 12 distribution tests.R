@@ -23,7 +23,12 @@ head(stud.recs)
 ks.test(stud.recs$sat.m, stud.recs$sat.v)
 
 
-# ploting
+# plotting
 boxplot(sat.m, sat.v)
 
 qqplot(sat.m, sat.v, main = "Math and Verbal SAT score")
+
+# shapiro test for normality 
+
+shapiro.test(sat.m)   # so it is not normaly distributed
+shapiro.test(sat.v)   # so it is not normaly distributed
