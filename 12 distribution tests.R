@@ -45,5 +45,12 @@ weight
 shapiro.test(weight)     # so it is not normally distributed
 
 
+# task 02
+head(normtemp)
+
+shapiro.test(normtemp$temperature)    # it is normally distributed
+
+
+
 
 
