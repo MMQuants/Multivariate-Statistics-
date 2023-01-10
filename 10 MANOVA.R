@@ -36,5 +36,10 @@ post_hoc <- lda(df$plant_var ~ dep_vars, CV=F)
 post_hoc
 
 
-plot_lda <- data.frame(df[, "plant_var"], lda = predict(post_hoc)$x)
-ggplot(plot_lda) + geom_point(aes(x = lda.LD1, y = lda.LD2, colour = plant_var), size = 4)
+plot_lda <- data.frame(df[, "plant_var"], 
+                       lda = predict(post_hoc)$x)
+
+ggplot(plot_lda) + geom_point(aes(x = lda.LD1, 
+                                  y = lda.LD2, 
+                                  colour = plant_var), size = 4)
+
