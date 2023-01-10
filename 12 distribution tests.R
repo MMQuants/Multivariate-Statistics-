@@ -21,3 +21,9 @@ ks.test(sat.m, sat.v) # so they do not have the same distribution
 
 head(stud.recs)
 ks.test(stud.recs$sat.m, stud.recs$sat.v)
+
+
+# ploting
+boxplot(sat.m, sat.v)
+
+qqplot(sat.m, sat.v, main = "Math and Verbal SAT score")
